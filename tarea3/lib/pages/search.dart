@@ -20,7 +20,7 @@ class Search extends StatelessWidget {
                 IconButton(
                     onPressed: (() {}),
                     icon: Shimmer.fromColors(
-                      baseColor: Colors.grey,
+                      baseColor: Color.fromARGB(255, 241, 241, 241),
                       highlightColor: Colors.white,
                       child: Image.asset(
                         "assets/file.jpg",
@@ -31,7 +31,7 @@ class Search extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Shimmer.fromColors(
-                      baseColor: Colors.grey,
+                      baseColor: Color.fromARGB(255, 241, 241, 241),
                       highlightColor: Colors.white,
                       child: Container(
                         color: Colors.white,
@@ -42,7 +42,7 @@ class Search extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Shimmer.fromColors(
-                      baseColor: Colors.grey,
+                      baseColor: Color.fromARGB(255, 241, 241, 241),
                       highlightColor: Colors.white,
                       child: Container(
                         color: Colors.white,

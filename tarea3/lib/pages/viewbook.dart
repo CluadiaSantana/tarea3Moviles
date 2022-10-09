@@ -53,19 +53,23 @@ class Viewbook extends StatelessWidget {
 
   Column _details(context, Map<String, dynamic> book, String texto) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Container(
-          padding: EdgeInsets.all(30),
-          height: 300,
-          child: _image(book),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              padding: EdgeInsets.all(30),
+              height: 300,
+              child: _image(book),
+            ),
+            Text(
+              book["title"],
+              style: TextStyle(fontSize: 33),
+              textAlign: TextAlign.center,
+            ),
+            _text(context, texto, book["fecha"], book["pag"])
+          ],
         ),
-        Text(
-          book["title"],
-          style: TextStyle(fontSize: 33),
-          textAlign: TextAlign.center,
-        ),
-        _text(context, texto, book["fecha"], book["pag"])
       ],
     );
   }
@@ -85,6 +89,7 @@ class Viewbook extends StatelessWidget {
 
   Container _text(context, String texto, String fecha, String paginas) {
     return Container(
+      width: double.infinity,
       padding: EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,11 +98,12 @@ class Viewbook extends StatelessWidget {
             fecha,
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          Text("Paginas: " + paginas),
+          Text("Paginas: " + paginas, textAlign: TextAlign.left),
           TextButton(
             style: TextButton.styleFrom(padding: EdgeInsets.zero),
             child: Text(
               texto,
+              textAlign: TextAlign.left,
               style: TextStyle(
                   fontStyle: FontStyle.italic,
                   color: Colors.black,

@@ -30,6 +30,7 @@ class HomePage extends StatelessWidget {
                       borderSide: BorderSide(color: Colors.grey)),
                   suffixIcon: IconButton(
                       onPressed: () {
+                        FocusManager.instance.primaryFocus?.unfocus();
                         BlocProvider.of<BookBloc>(context)
                             .add(BookSearchEvent(buscar: _buscar.value.text));
                       },
