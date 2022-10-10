@@ -5,8 +5,6 @@ abstract class BookState {}
 
 class BookInitial extends BookState {}
 
-class BookHomeState extends BookState {}
-
 class BookSearchState extends BookState {}
 
 class BookNullSearchState extends BookState {}

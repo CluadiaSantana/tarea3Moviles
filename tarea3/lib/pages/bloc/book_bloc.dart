@@ -35,7 +35,6 @@ class BookBloc extends Bloc<BookEvent, BookState> {
   }
 
   FutureOr<void> _detail(BookDetailsEvent event, Emitter<BookState> emit) {
-    print(event.allinformation);
     Map<String, dynamic> book = event.allinformation;
     dynamic ima = book['volumeInfo']['imageLinks']?['smallThumbnail'];
     dynamic title = book['volumeInfo']?['title'] != null
